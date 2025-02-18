@@ -23,6 +23,7 @@ PAGES = {
     "Play Retro Bowl": "retro",
     "Play Getaway Shootout": "get",
     "Play 1v1 LOL": "lol",
+    "Play Getting Over It": 'over',
     "Play Uno": "uno",
     "Play OvO": "ovo",
     "Play Cluster Rush": "cluster",
@@ -98,6 +99,8 @@ def main():
         play_cluster()
     elif st.session_state.page == "ovo":
         play_ovo()
+    elif st.session_state.page == 'over':
+        play_over()
 
 def home():
     st.title("Welcome to CR7 Games! (Suuuuui!!!)")
@@ -135,7 +138,7 @@ def play_Slither():
     st.title('Play Slope')
 
     # URL of the game or webpage you want to embed
-    game_url = 'https://c5jpxz-8080.csb.app/web/_aHR0cHM6Ly9zbG9wZTMuY29t_/'
+    game_url = 'https://k8z7mp-8080.csb.app/service/hvtrs8%2F-snoreeaoeko%2Cgktju%60.ko-/'
 
     # HTML code to embed the game in an iframe with fullscreen option
     iframe_code = f'''
@@ -480,6 +483,25 @@ def play_lol():
     # Button to go back to the home page
     if st.button('Back to Home'):
         st.session_state.page = 'home'
+
+def play_over():
+    st.title('Play Getting Over It')
+
+    # URL of the game or webpage you want to embed
+    game_url = 'https://k8z7mp-8080.csb.app/service/hvtrs8%2F-snoreeaoeko%2Cgktju%60.ko-dgtcin%2Feevtkne-mvgr%2Fiv.jtol/'
+
+    # HTML code to embed the game in an iframe with fullscreen option
+    iframe_code = f'''
+    <iframe src="{game_url}" width="100%" height="800px" style="border:none;" allowfullscreen></iframe>
+    '''
+
+    # Render the iframe in the Streamlit app
+    components.html(iframe_code, height=800)
+
+    # Button to go back to the home page
+    if st.button('Back to Home'):
+        st.session_state.page = 'home'
+
 
 def play_uno():
     st.title('Play Uno')
